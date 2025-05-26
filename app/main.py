@@ -30,7 +30,7 @@ def brute_force_range(
 ) -> Dict[str, str]:
     found = {}
     for i in range(start, end):
-        candidate = f"{i: 08d}"
+        candidate = f"{i:08d}"
         hashed = sha256_hash_str(candidate)
         if hashed in targets:
             print(f"[FOUND in PID] {candidate} → {hashed}")
